@@ -1,4 +1,5 @@
 require_relative "../config/environment.rb"
+require 'sqlite3'
 require 'active_support/inflector'
 require 'pry'
 

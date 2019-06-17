@@ -18,7 +18,7 @@ class InteractiveRecord
     table_info.each do |column|
       column_names << column["name"]
     end
-    
+    binding.pry
     column_names.compact
   end
   
@@ -38,7 +38,7 @@ class InteractiveRecord
     values = []
     
     self.class.column_names.each do |col_name|
-      values << "'#{send(col_name)}'" unless send(col_name) == nil
+      values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
     values.join(", ")
   end

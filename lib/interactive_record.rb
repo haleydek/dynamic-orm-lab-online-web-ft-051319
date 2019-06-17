@@ -12,7 +12,7 @@ class InteractiveRecord
     DB[:conn].results_as_hash = true
     
     sql = "PRAGMA table_info('#{table_name}')"
-    
+    DB[:conn].execute(sql)
     
   end
 end

@@ -60,7 +60,8 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute_hash)
-    
+    col_name = attribute_hash.keys.join("")
+    value = attribute_hash.values.join("")
     sql = "SELECT * FROM #{self.table_name} WHERE #{col_name} = '#{send(col_name)}'"
     DB[:conn].execute(sql)
   end

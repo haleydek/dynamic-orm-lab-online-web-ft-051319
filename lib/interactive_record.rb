@@ -13,7 +13,8 @@ class InteractiveRecord
     
     sql = "PRAGMA table_info('#{table_name}')"
     table_info = DB[:conn].execute(sql)
-    binding.pry
+    
+    table_info.map do |column|
     
   end
 end

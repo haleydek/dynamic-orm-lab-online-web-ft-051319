@@ -60,7 +60,9 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute_hash)
-    sql = "SELECT * FROM #{self.table_name} WHERE "
+    col_name = attribute_hash.map { |key, value| key.to_s } 
+    col_name = attribute_hash.map { |key, value| key.to_s } 
+    sql = "SELECT * FROM #{self.table_name} WHERE #{col_name} = "
   end
   
 end

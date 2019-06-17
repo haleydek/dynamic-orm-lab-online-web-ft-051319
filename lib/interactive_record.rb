@@ -38,7 +38,7 @@ class InteractiveRecord
     values = []
     
     self.class.column_names.each do |col_name|
-      values << "#{self.send}"
+      values << "'#{send.col_name}'" unless 
   end
   
   

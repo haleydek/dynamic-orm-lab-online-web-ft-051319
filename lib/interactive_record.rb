@@ -1,6 +1,6 @@
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
-require 'student'
+require 'student.rb'
 require 'pry'
 
 class InteractiveRecord

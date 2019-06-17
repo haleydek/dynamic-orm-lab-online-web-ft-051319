@@ -51,7 +51,7 @@ class InteractiveRecord
     
     DB[:conn].execute(sql)
     
-    @id = "SELECT "
+    @id = "SELECT last_insert_rowid()"
   end
   
 end

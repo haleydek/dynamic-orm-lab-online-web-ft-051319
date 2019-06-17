@@ -60,7 +60,6 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute_hash)
-    col_name = attribute_hash.key
     sql = "SELECT * FROM #{self.table_name} WHERE "
   end
   

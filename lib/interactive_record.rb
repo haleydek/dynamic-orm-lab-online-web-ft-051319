@@ -60,9 +60,9 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute_hash)
-    col_name = attribute_hash.map { |key, value| key.to_s } 
-    col_name = attribute_hash.map { |key, value| key.to_s } 
-    sql = "SELECT * FROM #{self.table_name} WHERE #{col_name} = "
+    col_name = attribute_hash.map { |key, value| key.to_s }.join("")
+    sql = "SELECT * FROM #{self.table_name} WHERE #{col_name} = '#{send(col_name)}'"
+    DB[:conn].execute(sql)
   end
   
 end

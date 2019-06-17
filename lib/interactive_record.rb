@@ -60,6 +60,6 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    sql = "SELECT * FROM #{table_name} WHERE "
+  end
   
 end

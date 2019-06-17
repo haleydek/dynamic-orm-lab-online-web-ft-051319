@@ -18,8 +18,11 @@ class InteractiveRecord
     table_info.each do |column|
       column_names << column["name"]
     end
-    binding.pry
     
     column_names.compact
+  end
+  
+  def initialize(options={})
+    options.each do { |key, value| self.send(("#{key}="), value) }
   end
 end
